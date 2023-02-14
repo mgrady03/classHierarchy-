@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-// Define the base class, Shape
+
 @interface Shape : NSObject
 
 @property (nonatomic) double area;
@@ -14,20 +14,20 @@
 @implementation Shape
 
 - (double)calculateArea {
-    // Abstract method - must be implemented by subclasses
+    
     [self doesNotRecognizeSelector:_cmd];
     return 0;
 }
 
 - (double)calculatePerimeter {
-    // Abstract method - must be implemented by subclasses
+    
     [self doesNotRecognizeSelector:_cmd];
     return 0;
 }
 
 @end
 
-// Define a subclass, Rectangle, that inherits from Shape
+
 @interface Rectangle : Shape
 
 @property (nonatomic) double width;
@@ -49,7 +49,7 @@
 
 @end
 
-// Define another subclass, Circle, that also inherits from Shape
+
 @interface Circle : Shape
 
 @property (nonatomic) double radius;
@@ -70,7 +70,7 @@
 
 @end
 
-// Main method - create instances of Shape subclasses and call their methods
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Rectangle *rectangle = [[Rectangle alloc] init];
